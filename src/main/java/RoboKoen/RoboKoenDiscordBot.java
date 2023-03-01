@@ -22,9 +22,8 @@ import static net.dv8tion.jda.api.interactions.commands.OptionType.STRING;
 
 public class RoboKoenDiscordBot extends ListenerAdapter {
 
-    //Holy shit this is so unsafe, I gotta figure out how to do this correctly later.
-    private static String accessKey = "MTA4MDYwMDkwNjEyODY5MTMzMg.GC-cJW.js6aV06hrSmvo0TbNqAxFqMpJ06HN2U1VV6dr8";
-    public static void main(String[] args) throws LoginException {
+    public static void main(String accessKey) throws LoginException {
+
         //Instantiate bot
         JDA jda = JDABuilder.createLight(accessKey, EnumSet.noneOf(GatewayIntent.class)) // slash commands don't need any intents
                 .addEventListeners(new RoboKoenDiscordBot())
