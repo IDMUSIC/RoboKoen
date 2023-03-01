@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e1fb0f6-75a6-4087-b814-9153b01eb9d3" name="Changes" comment="Documentation and setup.">
+    <list default="true" id="2e1fb0f6-75a6-4087-b814-9153b01eb9d3" name="Changes" comment="I'm going to cry">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RoboKoen/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoboKoen/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RoboKoen/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RoboKoen/RoboKoenDiscordBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoboKoen/RoboKoenDiscordBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,9 +92,9 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RoboKoen.Main" />
+  <component name="RunManager" selected="Application.Start KoenBot">
+    <configuration name="RoboKoenDiscordBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RoboKoen.RoboKoenDiscordBot" />
       <module name="RoboKoen.main" />
       <extension name="coverage">
         <pattern>
@@ -105,26 +106,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RoboKoen [buildEnvironment]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="buildEnvironment" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="Start KoenBot" type="Application" factoryName="Application" temporary="true">
+      <envs>
+        <env name="DISCORD_BOT_KEY" value="MTA4MDYwMDkwNjEyODY5MTMzMg.Gc55rF.dUWdIWYnwcupUZuPxmAdgKxykc4gMVYKQTO4zo" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="RoboKoen.RoboKoenDiscordBot" />
+      <module name="RoboKoen.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="RoboKoen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="RoboKoen [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -189,13 +185,20 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.RoboKoenDiscordBot" />
+      <item itemvalue="Application.Start KoenBot" />
+      <item itemvalue="Gradle.RoboKoen [build]" />
+      <item itemvalue="Gradle.RoboKoen [help]" />
+      <item itemvalue="Gradle.RoboKoen [properties]" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.RoboKoen [build]" />
+        <item itemvalue="Application.RoboKoenDiscordBot" />
+        <item itemvalue="Application.Start KoenBot" />
         <item itemvalue="Gradle.RoboKoen [properties]" />
         <item itemvalue="Gradle.RoboKoen [help]" />
-        <item itemvalue="Gradle.RoboKoen [buildEnvironment]" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677707835581</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="I'm going to cry">
+      <created>1677712957448</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677712957448</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,6 +249,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit." />
     <MESSAGE value="Documentation and setup." />
-    <option name="LAST_COMMIT_MESSAGE" value="Documentation and setup." />
+    <MESSAGE value="I'm going to cry" />
+    <option name="LAST_COMMIT_MESSAGE" value="I'm going to cry" />
   </component>
 </project>

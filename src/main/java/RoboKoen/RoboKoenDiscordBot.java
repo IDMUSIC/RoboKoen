@@ -22,7 +22,10 @@ import static net.dv8tion.jda.api.interactions.commands.OptionType.STRING;
 
 public class RoboKoenDiscordBot extends ListenerAdapter {
 
-    public static void main(String accessKey) throws LoginException {
+    public static void main(String[] args) throws LoginException {
+        System.out.println("Is this thing on???");
+        //Get Access Key from environment vars
+        String accessKey = System.getenv("DISCORD_BOT_KEY");
 
         //Instantiate bot
         JDA jda = JDABuilder.createLight(accessKey, EnumSet.noneOf(GatewayIntent.class)) // slash commands don't need any intents
