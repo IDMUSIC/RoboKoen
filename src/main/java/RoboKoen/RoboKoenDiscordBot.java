@@ -25,6 +25,7 @@ public class RoboKoenDiscordBot extends ListenerAdapter {
     //Holy shit this is so unsafe, I gotta figure out how to do this correctly later.
     private static String accessKey = "MTA4MDYwMDkwNjEyODY5MTMzMg.GC-cJW.js6aV06hrSmvo0TbNqAxFqMpJ06HN2U1VV6dr8";
     public static void main(String[] args) throws LoginException {
+        //Instantiate bot
         JDA jda = JDABuilder.createLight(accessKey, EnumSet.noneOf(GatewayIntent.class)) // slash commands don't need any intents
                 .addEventListeners(new RoboKoenDiscordBot())
                 .build();
@@ -35,8 +36,8 @@ public class RoboKoenDiscordBot extends ListenerAdapter {
         commands.addCommands(
                 Commands.slash(testCommandID, "Test to see if bot works.")
 
-                //.setGuildOnly(true)
-                //.setDefaultPermissions(DefaultMemberPermissions.DISABLED)
+                //.setGuildOnly(true) <- Makes it so command only can be called in servers, and not DMs
+                //.setDefaultPermissions(DefaultMemberPermissions.DISABLED) <- Limits who can call the command
         );
 
         //add other commands here
@@ -45,6 +46,10 @@ public class RoboKoenDiscordBot extends ListenerAdapter {
         commands.queue();
     }
 
+    /**
+     * Listens to the command event passed in, and executes server side code for said command
+     * @param event Triggered slash command
+     */
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
         // Only accept commands from guilds
@@ -56,10 +61,12 @@ public class RoboKoenDiscordBot extends ListenerAdapter {
                 koen(event); // content is required so no null-check here
                 break;
             default:
+                //setEphemeral(true) makes it so only the user who called the command sees it.
                 event.reply("I don't know what that command is :(").setEphemeral(true).queue();
         }
     }
 
+    //Test command that prints "Koen!" into the channel.
     public void koen(SlashCommandInteractionEvent event) {
         event.reply("Koen!").setEphemeral(true).queue();
     }
