@@ -1,6 +1,5 @@
 package RoboKoen;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
@@ -10,22 +9,23 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.requests.restaction.CommandListUpdateAction;
 
 import javax.security.auth.login.LoginException;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.net.http.HttpResponse.BodyHandlers;
+import java.io.InputStream;
 import java.util.EnumSet;
-
-import static net.dv8tion.jda.api.interactions.commands.OptionType.STRING;
+import java.util.Properties;
 
 public class RoboKoenDiscordBot extends ListenerAdapter {
 
     public static void main(String[] args) throws LoginException {
         System.out.println("Is this thing on???");
         //Get Access Key from environment vars
-        String accessKey = System.getenv("DISCORD_BOT_KEY");
+//        String accessKey = System.getenv("DISCORD_BOT_KEY");
+//        if (accessKey.isEmpty() && accessKey.isBlank()) {
+//            accessKey = getDiscordBotKeyLocally();
+//        }
+
+        String accessKey = getDiscordBotKeyLocally();
 
         //Instantiate bot
         JDA jda = JDABuilder.createLight(accessKey, EnumSet.noneOf(GatewayIntent.class)) // slash commands don't need any intents
@@ -44,8 +44,44 @@ public class RoboKoenDiscordBot extends ListenerAdapter {
 
         //add other commands here
 
+        /**Command to roll for gatcha
+         * Need to check user database to see if they already have a profile, if not, make one and then roll.
+         * Add their spoils to their collection.
+         * How many times can users roll?
+         * Pity System???
+         * probably will have a max limit of 99 copies of each koen card
+         */
+
+        /** Command for checking gatcha collection
+         *  Shows how many Koen cards they have, their rarity, their art, and how many copies.
+         */
+
+        /** Trading would be cool, but not right now.
+         *  That shit is fucking hard to pull off in a chat application, so later down the road.
+         */
+
+
 
         commands.queue();
+    }
+
+    public static String getDiscordBotKeyLocally() {
+        try (InputStream input = new FileInputStream("local.properties")) {
+            Properties prop = new Properties();
+
+            prop.load(input);
+
+            String accessKey = prop.getProperty("DISCORD_BOT_KEY");
+
+            System.out.println(accessKey);
+
+            return accessKey;
+        }
+        catch (IOException ex) {
+            System.out.println("Koen Failure...");
+            ex.printStackTrace();
+            return "";
+        }
     }
 
     /**

@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e1fb0f6-75a6-4087-b814-9153b01eb9d3" name="Changes" comment="I'm going to cry">
+    <list default="true" id="2e1fb0f6-75a6-4087-b814-9153b01eb9d3" name="Changes" comment="I lied, it works now.&#10;&#10;You're going to need to create a file called &quot;local.properties&quot; in the root of the directory.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RoboKoen/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RoboKoen/RoboKoenDiscordBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RoboKoen/RoboKoenDiscordBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,9 +105,6 @@
       </method>
     </configuration>
     <configuration name="Start KoenBot" type="Application" factoryName="Application" temporary="true">
-      <envs>
-        <env name="DISCORD_BOT_KEY" value="MTA4MDYwMDkwNjEyODY5MTMzMg.Gc55rF.dUWdIWYnwcupUZuPxmAdgKxykc4gMVYKQTO4zo" />
-      </envs>
       <option name="MAIN_CLASS_NAME" value="RoboKoen.RoboKoenDiscordBot" />
       <module name="RoboKoen.main" />
       <extension name="coverage">
@@ -232,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677712957448</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finally it actually works">
+      <created>1677715154687</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677715154687</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,6 +252,8 @@
     <MESSAGE value="Initial Commit." />
     <MESSAGE value="Documentation and setup." />
     <MESSAGE value="I'm going to cry" />
-    <option name="LAST_COMMIT_MESSAGE" value="I'm going to cry" />
+    <MESSAGE value="Finally it actually works" />
+    <MESSAGE value="I lied, it works now.&#10;&#10;You're going to need to create a file called &quot;local.properties&quot; in the root of the directory." />
+    <option name="LAST_COMMIT_MESSAGE" value="I lied, it works now.&#10;&#10;You're going to need to create a file called &quot;local.properties&quot; in the root of the directory." />
   </component>
 </project>
